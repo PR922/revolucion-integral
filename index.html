@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revolución Integral</title>
+
+    <!-- Fuente Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
+            <div class="container-fluid">
+                <a class="navbar-brand logo d-flex align-items-center" href="#">
+                    <img src="./imagen/logo.png" alt="Revolución Integral" style="max-height: 45px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal"
+                    aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarPrincipal">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/desayuno.html">Recetas para Desayunar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/almuerzo.html">Recetas para Almorzar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/merienda.html">Recetas para Merendar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/cena.html">Recetas para Cenar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <h1>Revolución Integral</h1>
+
+        <!-- Carrusel de recetas destacadas -->
+        <section class="container my-4">
+            <div id="carruselRecetas" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carruselRecetas" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carruselRecetas" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carruselRecetas" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner rounded shadow">
+                    <div class="carousel-item active">
+                        <img src="./imagen/cena-tortilla-de-verduras.jpg" class="d-block w-100" alt="Cena saludable">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                            <h5>Cenas Nutritivas</h5>
+                            <p>Opciones livianas y deliciosas para cerrar el día.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagen/desayuno-panqueques.jpg" class="d-block w-100" alt="Desayuno energético">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                            <h5>Desayunos Energéticos</h5>
+                            <p>Empezá la mañana con energía real y sin ultraprocesados.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagen/almuerzo-polenta.jpg" class="d-block w-100" alt="Almuerzo práctico">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                            <h5>Almuerzos Prácticos</h5>
+                            <p>Comidas rápidas, ricas y equilibradas.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselRecetas"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselRecetas"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="contenido-recetario inicio">
+            <h2 class="inicio-titulo">Recetas para rendir mejor en tu día a día y mejorar tus hábitos</h2>
+
+            <article class="inicio-intro">
+                <h3>¿Comer saludable también puede ser rico?</h3>
+                <p>Obvio que sí, acá vas a encontrar recetas saladas saludables, simples y llenas de sabor, pensadas
+                    para que comer bien sea práctico y disfrutable. Opciones nutritivas para todos los momentos del día,
+                    ideales para dejar atrás los ultraprocesados y empezar a ver la comida como una fuente de energía
+                    para sentirte mejor y rendir al máximo.</p>
+            </article>
+
+            <article class="inicio-motivo">
+                <h3>Si sentís que comer mejor se volvió demasiado complicado, este recetario es para vos</h3>
+                <p>Quizás alguna vez intentaste “comer sano” y terminás contando calorías, eliminando alimentos,
+                    siguiendo reglas imposibles o sintiendo que cada comida era una prueba de voluntad...</p>
+            </article>
+
+            <article class="inicio-proposito">
+                <h3>¿Por qué hacemos esto?</h3>
+                <p>Creamos este recetario porque queremos demostrar que comer saludable también puede ser rico, simple y
+                    disfrutable. Nuestro objetivo es ayudarte a dejar de ver la alimentación saludable como una
+                    obligación o una “dieta” y empezar a verla como una fuente de energía para tu día a día.</p>
+                <p>Está pensado para personas que quieren comer mejor, sentirse con más energía y alejarse poco a poco
+                    de los alimentos ultraprocesados, sin necesidad de pasar horas en la cocina ni hacer grandes
+                    sacrificios.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <ul class="redes">
+            <li>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="./imagen/instagram.jpg" alt="Instagram">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank">
+                    <img src="./imagen/facebook.webp" alt="Facebook">
+                </a>
+            </li>
+        </ul>
+
+        <div class="ubicacion">
+            <h2 class="h2-nosotros">¿Dónde Ubicarnos?</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.44367080645!2d-58.515699354452145!3d-34.61566245842845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88488f63!2sPuerto%20Madero%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1700000000000!5m2!1ses-419!2sar"
+                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
