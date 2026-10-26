@@ -4,6 +4,12 @@ Sitio web de recetas saludables e integrales, pensado para comer rico y simple s
 
 El sitio tiene un diseño **mobile-first** y se adapta a celular, tablet y escritorio usando **CSS Grid**, **Flexbox** y **media queries**.
 
+## Sitio publicado
+
+🌐 **https://pr922.github.io/revolucion-integral/**
+
+(Publicado con GitHub Pages desde la rama `main`, carpeta `/ (root)`.)
+
 ## Páginas
 
 | Página | Archivo |
