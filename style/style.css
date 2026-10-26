@@ -546,3 +546,46 @@ article ol li {
         height: 180px;
     }
 }
+
+/* ==========================================
+8. MEDIA QUERY: PANTALLAS GRANDES (min-width: 1440px)
+   ========================================== */
+@media (min-width: 1440px) {
+    .contenido-recetario {
+        max-width: 1280px;
+    }
+
+    #carruselRecetas {
+        max-width: 1000px;
+    }
+
+    .carousel-item img {
+        height: 420px;
+    }
+
+    h1 {
+        font-size: 3.25rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+    }
+
+    .footer .ubicacion iframe {
+        max-width: 520px;
+        height: 260px;
+    }
+}
+
+/* ==========================================
+9. MEDIA QUERY: CELULAR EN HORIZONTAL (altura baja)
+   ========================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .carousel-item img {
+        height: 160px;
+    }
+
+    .nosotros-carrusel .carousel-item img {
+        height: 160px;
+    }
+}
