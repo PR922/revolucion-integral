@@ -11,6 +11,15 @@
   max-height: 45px;
 }
 
+// Navbar de Bootstrap entre 992px y 1199px: ya está expandida pero no entran
+// los 6 links en una sola línea. Se achica la letra y no se corta el texto.
+.navbar-nav .nav-link {
+  @include navbar-compacta {
+    white-space: nowrap;
+    font-size: 0.8rem;
+  }
+}
+
 // Menú propio (links tipo "botón")
 .nav {
   ul {
