@@ -28,6 +28,8 @@ No necesita instalación ni servidor:
 1. Clonar o descargar el repositorio.
 2. Abrir `index.html` (está en la raíz del repositorio) en el navegador.
 
+Los estilos se escriben en SCSS y se compilan a `style/style.css` (ver [Estilos con SCSS](#estilos-con-scss)). El `style.css` ya compilado está en el repositorio, así que para ver el sitio no hace falta compilar nada.
+
 También se puede abrir la carpeta en VS Code y usar la extensión **Live Server** (clic derecho sobre `index.html` → *Open with Live Server*).
 
 > Bootstrap y la tipografía Poppins se cargan por CDN, por lo que hace falta conexión a internet para verlos.
@@ -45,10 +47,65 @@ revolucion-integral/   (raíz del repositorio)
 │   ├── merienda.html
 │   └── nosotros.html
 ├── style/
-│   └── style.css      ← hoja de estilos única para todo el sitio
+│   └── style.css      ← generado al compilar scss/main.scss (no se edita a mano)
+├── scss/              ← código fuente de los estilos (ver más abajo)
+├── package.json
 ├── imagen/
 └── paleta/
     └── paleta.txt
+```
+
+## Estilos con SCSS
+
+Todo el CSS propio del sitio nace de archivos `.scss` dentro de `scss/`. El archivo `style/style.css` es solo el resultado de la compilación y no se edita a mano.
+
+```
+scss/
+├── main.scss              ← único punto de entrada (usa @use)
+├── utilities/
+│   ├── _variables.scss    ← colores, tipografía, radios, espacios y breakpoints
+│   └── _mixins.scss       ← media queries, flex en columna, fondo de hojas
+├── base/
+│   ├── _base.scss         ← estilos globales a etiquetas (*, body, ul, a, img)
+│   └── _tipografia.scss   ← h1, h2, h3 y p
+├── layout/
+│   ├── _header.scss       ← header
+│   ├── _nav.scss          ← navbar de Bootstrap y menú
+│   ├── _main.scss         ← main, contenedor y grilla doble
+│   ├── _inicio.scss       ← grilla de la página de inicio
+│   └── _footer.scss       ← footer, redes y mapa
+└── components/
+    ├── _cards.scss        ← tarjetas (article) y listas
+    ├── _carousel.scss     ← carrusel de Bootstrap personalizado
+    ├── _receta.scss       ← páginas de recetas
+    └── _nosotros.scss     ← página Nosotros
+```
+
+Qué se usa de SCSS:
+
+- **Variables** (`$color-verde`, `$espacio-lg`, `$bp-tablet`...): ningún color queda escrito a mano fuera de `_variables.scss`.
+- **Partials** (archivos que empiezan con `_`) y **`@use`** desde `main.scss`.
+- **Mixins** (`tablet`, `escritorio`, `flex-columna`, `fondo-hoja`...) para no repetir código.
+- **Nesting y `&`** para agrupar las reglas de cada componente.
+
+### Cómo compilar
+
+Requiere [Node.js](https://nodejs.org). La primera vez:
+
+```
+npm install
+```
+
+Para compilar:
+
+```
+npm run sass
+```
+
+Para que compile solo cada vez que se guarda un `.scss`:
+
+```
+npm run sass:watch
 ```
 
 ## Diseño responsive
@@ -73,7 +130,7 @@ Las columnas se definen con la unidad `fr` y el espaciado entre elementos con `g
 ## Tecnologías
 
 - HTML5 semántico
-- CSS3 (Grid, Flexbox, media queries)
+- CSS3 (Grid, Flexbox, media queries) escrito con SCSS (Sass)
 - Bootstrap 5.3 (barra de navegación y carruseles)
 - Google Fonts (Poppins)
 
