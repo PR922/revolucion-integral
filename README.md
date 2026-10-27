@@ -146,6 +146,42 @@ Se parte del diseño para celular (sin media query, todo apilado en 1 columna al
 
 Las columnas se definen con la unidad `fr` y el espaciado entre elementos con `gap`.
 
+## SEO on-page y accesibilidad
+
+### Títulos y meta descriptions
+
+Cada página tiene un `<title>` y una `<meta name="description">` propios, que coinciden con su contenido (sin `meta keywords`, que ya no se usa).
+
+| Página | Title | Palabras clave |
+| --- | --- | --- |
+| Inicio | Recetas saludables e integrales \| Revolución Integral | recetas saludables, integrales |
+| Desayuno | Panqueques de banana y avena \| Desayunos saludables | panqueques de banana, desayuno saludable |
+| Almuerzo | Polenta a la plancha con atún y queso \| Almuerzo saludable | polenta con atún, almuerzo saludable |
+| Merienda | Budín integral de limón \| Meriendas saludables | budín integral, merienda saludable |
+| Cena | Tortilla de verduras y avena \| Cenas saludables | tortilla de verduras, cena saludable |
+| Nosotros | Sobre nosotros \| Revolución Integral, recetas saludables | Revolución Integral, comida saludable |
+
+Las palabras clave aparecen de forma natural en el `<title>`, el `<h1>`, los subtítulos y el texto de introducción, sin repetirlas de más.
+
+### HTML semántico
+
+- Un solo `<h1>` por página y jerarquía ordenada (`h1` → `h2` → `h3` → `h4`), sin saltos de nivel.
+- Se usan `<header>`, `<nav aria-label>`, `<main>`, `<section aria-labelledby>`, `<article>`, `<figure>`, `<aside>` y `<footer>` en lugar de `<div>` genéricos.
+- Los iframes (mapa) tienen `title` y los links externos `rel="noopener noreferrer"`.
+
+### Imágenes
+
+- Todas las imágenes tienen un `alt` descriptivo y específico de cada página.
+- Los archivos tienen nombres descriptivos en minúsculas y con guiones: `logo-revolucion-integral.png`, `icono-instagram.jpg`, `icono-facebook.webp` y `fondo-hojas-acuarela.avif` (antes `logo.png`, `instagram.jpg`, `facebook.webp` y `fondo-hoja-verde.png`, que en realidad era un AVIF).
+
+### Contraste (WCAG AA)
+
+| Texto | Fondo | Ratio |
+| --- | --- | --- |
+| Texto `#493B32` | `#FAF8F1` | 10.11:1 |
+| Verde de títulos `#5A6D43` (antes `#667A4E`, 4.43:1) | `#FAF8F1` | 5.34:1 |
+| Terracota `#C97855` (solo títulos grandes) | `#FAF8F1` | 3.14:1 (mínimo para texto grande: 3:1) |
+
 ## Tecnologías
 
 - HTML5 semántico
