@@ -1,0 +1,54 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ==========================================
+// PÁGINA DE INICIO (index.html)
+// ==========================================
+.inicio {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "titulo"
+    "intro"
+    "motivo"
+    "proposito";
+  gap: $espacio-lg;
+
+  > * {
+    min-width: 0;
+  }
+
+  // Tablet: 2 columnas, el último texto ocupa todo el ancho
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "titulo titulo"
+      "intro motivo"
+      "proposito proposito";
+  }
+
+  // Escritorio: 3 columnas, una por cada texto
+  @include escritorio {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "titulo titulo titulo"
+      "intro motivo proposito";
+    gap: $espacio-xl;
+  }
+}
+
+.inicio-titulo {
+  grid-area: titulo;
+}
+
+.inicio-intro {
+  grid-area: intro;
+}
+
+.inicio-motivo {
+  grid-area: motivo;
+}
+
+.inicio-proposito {
+  grid-area: proposito;
+}

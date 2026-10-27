@@ -1,0 +1,12 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ==========================================
+// HEADER (contiene la navbar de Bootstrap)
+// ==========================================
+.header {
+  grid-area: header;
+  padding: $espacio-md;
+  @include fondo-hoja;
+  @include flex-columna($espacio-md, center);
+}

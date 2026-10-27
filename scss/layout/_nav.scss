@@ -1,0 +1,38 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ==========================================
+// NAV
+// Incluye la personalización de la navbar de Bootstrap
+// ==========================================
+
+// Logo de la navbar (antes style="max-height: 45px;" en cada HTML)
+.navbar-brand img {
+  max-height: 45px;
+}
+
+// Menú propio (links tipo "botón")
+.nav {
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: $espacio-md;
+
+    li a {
+      background-color: $color-fondo;
+      padding: $espacio-xs $espacio-sm;
+      border-radius: $radio-chico;
+      font-weight: 500;
+      display: inline-block;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: $color-terracota;
+        color: $color-fondo;
+      }
+    }
+  }
+}

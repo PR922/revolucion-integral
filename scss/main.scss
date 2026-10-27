@@ -10,3 +10,10 @@
 // 2. Base (estilos globales a etiquetas)
 @use "base/base";
 @use "base/tipografia";
+
+// 3. Layout
+@use "layout/header";
+@use "layout/nav";
+@use "layout/main";
+@use "layout/inicio";
+@use "layout/footer";
