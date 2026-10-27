@@ -31,10 +31,10 @@
 
     <!-- 2. Navbar de Bootstrap -->
     <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100" aria-label="Navegación principal">
             <div class="container-fluid">
-                <a class="navbar-brand logo d-flex align-items-center" href="../index.html">
-                    <img src="../imagen/logo-revolucion-integral.png" alt="Revolución Integral">
+                <a class="navbar-brand logo d-flex align-items-center" href="../index.html" aria-label="Revolución Integral, ir al inicio">
+                    <img src="../imagen/logo-revolucion-integral.png" alt="Logo de Revolución Integral: figura humana verde con hojas y frutas dentro de un círculo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal"
                     aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,16 +68,18 @@
     </header>
 
     <main class="main">
-        <h1 data-aos="fade-down">Recetas para Almorzar</h1>
+        <h1 data-aos="fade-down">Recetas de almuerzo saludable</h1>
 
         <section class="contenido-recetario">
             <h2 data-aos="fade-up">Polenta a la plancha, con Atún y Queso</h2>
 
             <article class="receta grid-doble">
                 <div class="receta-presentacion" data-aos="zoom-in">
-                    <div class="almuerzo">
-                        <img src="../imagen/almuerzo-polenta.jpg" alt="Polenta a la plancha con atún y queso">
-                    </div>
+                    <p>Una receta de almuerzo saludable y práctica: polenta a la plancha cubierta con atún, queso cremoso y perejil fresco.</p>
+
+                    <figure class="receta-foto">
+                        <img src="../imagen/almuerzo-polenta.jpg" alt="Porción de polenta a la plancha con atún y queso en un plato">
+                    </figure>
                 </div>
 
                 <section class="receta-ingredientes" data-aos="fade-up" data-aos-delay="100">
@@ -97,7 +99,7 @@
                 </section>
 
                 <section class="receta-pasos" data-aos="fade-up" data-aos-delay="200">
-                    <h4>Paso a Paso</h4>
+                    <h3>Paso a Paso</h3>
                     <ol>
                         <li>Cortar la polenta fría en 2 cilindros de 1 cm de espesor.</li>
                         <li>Derretir manteca en sartén, agregar ajo picado y dorar levemente (* el ajo no se debe quemar
@@ -117,24 +119,26 @@
     <footer class="footer">
         <ul class="redes">
             <li>
-                <a href="https://www.instagram.com/" target="_blank">
-                    <img src="../imagen/icono-instagram.jpg" alt="Instagram">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram de Revolución Integral (se abre en una pestaña nueva)">
+                    <img src="../imagen/icono-instagram.jpg" alt="Icono de Instagram">
                 </a>
             </li>
             <li>
-                <a href="https://www.facebook.com/?locale=es_LA" target="_blank">
-                    <img src="../imagen/icono-facebook.webp" alt="Facebook">
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank" rel="noopener noreferrer"
+                    aria-label="Facebook de Revolución Integral (se abre en una pestaña nueva)">
+                    <img src="../imagen/icono-facebook.webp" alt="Icono de Facebook">
                 </a>
             </li>
         </ul>
 
-        <div class="ubicacion" data-aos="fade-up">
-            <h2 class="h2-nosotros">¿Dónde Ubicarnos?</h2>
-            <iframe
+        <section class="ubicacion" data-aos="fade-up" aria-labelledby="titulo-ubicacion">
+            <h2 id="titulo-ubicacion" class="ubicacion-titulo">¿Dónde Ubicarnos?</h2>
+            <iframe title="Mapa de Google Maps con la ubicación de Revolución Integral"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0167132768494!2d-58.384150723467615!3d-34.60373887295412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
                 width="600" height="450" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        </section>
     </footer>
 
     <!-- 3. Bootstrap 5 JS Bundle -->

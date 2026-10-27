@@ -30,10 +30,10 @@
 <body>
 
     <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100" aria-label="Navegación principal">
             <div class="container-fluid">
-                <a class="navbar-brand logo d-flex align-items-center" href="../index.html">
-                    <img src="../imagen/logo-revolucion-integral.png" alt="Revolución Integral">
+                <a class="navbar-brand logo d-flex align-items-center" href="../index.html" aria-label="Revolución Integral, ir al inicio">
+                    <img src="../imagen/logo-revolucion-integral.png" alt="Logo de Revolución Integral: figura humana verde con hojas y frutas dentro de un círculo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal"
                     aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,7 +67,7 @@
     </header>
 
     <main class="main">
-        <h1 data-aos="fade-down">Recetas para Desayunar</h1>
+        <h1 data-aos="fade-down">Recetas de desayuno saludable</h1>
 
         <section class="contenido-recetario">
             <h2 data-aos="fade-up">Panqueques de Banana y Avena</h2>
@@ -81,9 +81,9 @@
                         Además, son una excelente fuente de energía para comenzar el día con fuerza.
                     </p>
 
-                    <div class="desayuno">
-                        <img src="../imagen/desayuno-panqueques.jpg" alt="Plato con panqueques de banana y avena">
-                    </div>
+                    <figure class="receta-foto">
+                        <img src="../imagen/desayuno-panqueques.jpg" alt="Pila de panqueques de banana y avena servida en un plato">
+                    </figure>
                 </div>
 
                 <section class="receta-ingredientes" data-aos="fade-up" data-aos-delay="100">
@@ -99,7 +99,7 @@
                 </section>
 
                 <section class="receta-pasos" data-aos="fade-up" data-aos-delay="200">
-                    <h4 class="h4-desayuno">Paso a Paso</h4>
+                    <h3>Paso a Paso</h3>
                     <ol>
                         <li>Pisá las bananas maduras en un bol.</li>
                         <li>Agregá el huevo y mezclá bien.</li>
@@ -111,11 +111,11 @@
                         <li>Retirá cuando estén dorados, evitando que se quemen estando atento a la hornalla.</li>
                     </ol>
 
-                    <div class="receta-tips">
-                        <h5 class="h5-desayuno">Tips</h5>
+                    <aside class="receta-tips">
+                        <h4>Tips</h4>
                         <p>Estar al lado de la hornalla para evitar que se quemen. Quedan muy ricos con dulce de leche y un café
                             con leche.</p>
-                    </div>
+                    </aside>
                 </section>
             </article>
         </section>
@@ -124,23 +124,25 @@
     <footer class="footer">
         <ul class="redes">
             <li>
-                <a href="https://www.instagram.com/" target="_blank">
-                    <img src="../imagen/icono-instagram.jpg" alt="Instagram">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram de Revolución Integral (se abre en una pestaña nueva)">
+                    <img src="../imagen/icono-instagram.jpg" alt="Icono de Instagram">
                 </a>
             </li>
             <li>
-                <a href="https://www.facebook.com/?locale=es_LA" target="_blank">
-                    <img src="../imagen/icono-facebook.webp" alt="Facebook">
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank" rel="noopener noreferrer"
+                    aria-label="Facebook de Revolución Integral (se abre en una pestaña nueva)">
+                    <img src="../imagen/icono-facebook.webp" alt="Icono de Facebook">
                 </a>
             </li>
         </ul>
 
-        <div class="ubicacion" data-aos="fade-up">
-            <h2 class="h2-nosotros">¿Dónde Ubicarnos?</h2>
-            <iframe
+        <section class="ubicacion" data-aos="fade-up" aria-labelledby="titulo-ubicacion">
+            <h2 id="titulo-ubicacion" class="ubicacion-titulo">¿Dónde Ubicarnos?</h2>
+            <iframe title="Mapa de Google Maps con la ubicación de Revolución Integral"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105143.24497021496!2d-58.60934055664066!3d-34.56048199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb784d8e02d67%3A0xf922b68af1a290!2sNRD%20Nutrici%C3%B3n!5e0!3m2!1ses-419!2sar!4v1787863194541!5m2!1ses-419!2sar"
                 allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </div>
+        </section>
     </footer>
 
     <!-- Bootstrap 5 JS Bundle -->

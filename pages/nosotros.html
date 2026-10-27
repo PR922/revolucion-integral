@@ -30,10 +30,10 @@
 <body>
 
     <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100" aria-label="Navegación principal">
             <div class="container-fluid">
-                <a class="navbar-brand logo d-flex align-items-center" href="../index.html">
-                    <img src="../imagen/logo-revolucion-integral.png" alt="Revolución Integral">
+                <a class="navbar-brand logo d-flex align-items-center" href="../index.html" aria-label="Revolución Integral, ir al inicio">
+                    <img src="../imagen/logo-revolucion-integral.png" alt="Logo de Revolución Integral: figura humana verde con hojas y frutas dentro de un círculo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal"
                     aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +66,7 @@
     </header>
 
     <main class="main container my-4">
-        <h1 class="text-center mb-4" data-aos="fade-down">Sobre Nosotros</h1>
+        <h1 class="text-center mb-4" data-aos="fade-down">Sobre Nosotros: Revolución Integral</h1>
 
         <section class="contenido-recetario grid-doble nosotros">
             <article class="nosotros-historia" data-aos="fade-up">
@@ -78,24 +78,25 @@
             </article>
 
             <!-- Carrusel de Bootstrap -->
-            <div id="carouselNosotros" class="carousel slide nosotros-carrusel" data-aos="zoom-in" data-bs-ride="carousel">
+            <div id="carouselNosotros" class="carousel slide nosotros-carrusel" data-aos="zoom-in"
+                aria-label="Fotos de nuestro equipo, nuestra cocina y nuestra misión" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselNosotros" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
+                        aria-current="true" aria-label="Ir a la diapositiva 1"></button>
                     <button type="button" data-bs-target="#carouselNosotros" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
+                        aria-label="Ir a la diapositiva 2"></button>
                     <button type="button" data-bs-target="#carouselNosotros" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
+                        aria-label="Ir a la diapositiva 3"></button>
                 </div>
                 <div class="carousel-inner rounded">
                     <div class="carousel-item active">
-                        <img src="../imagen/nuestro-equipo.jpg" class="d-block w-100" alt="Nuestro equipo">
+                        <img src="../imagen/nuestro-equipo.jpg" class="d-block w-100" alt="Equipo de cocineros con uniforme blanco preparando platos en una cocina profesional">
                     </div>
                     <div class="carousel-item">
-                        <img src="../imagen/nuestra-cocina.jpg" class="d-block w-100" alt="nuestra cocina">
+                        <img src="../imagen/nuestra-cocina.jpg" class="d-block w-100" alt="Cocina profesional con ollas, utensilios colgados y campana extractora">
                     </div>
                     <div class="carousel-item">
-                        <img src="../imagen/nuestra-mision.jpg" class="d-block w-100" alt="nuestra mision">
+                        <img src="../imagen/nuestra-mision.jpg" class="d-block w-100" alt="Misión: ofrecer la mayor experiencia gastronómica en un restaurante de comida sana. Visión: llevar el sabor de nuestros sándwiches y nuestro servicio a toda la región">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselNosotros"
@@ -115,25 +116,27 @@
     <footer class="footer">
         <ul class="redes">
             <li>
-                <a href="https://www.instagram.com/" target="_blank">
-                    <img src="../imagen/icono-instagram.jpg" alt="Instagram">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram de Revolución Integral (se abre en una pestaña nueva)">
+                    <img src="../imagen/icono-instagram.jpg" alt="Icono de Instagram">
                 </a>
             </li>
             <li>
-                <a href="https://www.facebook.com/?locale=es_LA" target="_blank">
-                    <img src="../imagen/icono-facebook.webp" alt="Facebook">
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank" rel="noopener noreferrer"
+                    aria-label="Facebook de Revolución Integral (se abre en una pestaña nueva)">
+                    <img src="../imagen/icono-facebook.webp" alt="Icono de Facebook">
                 </a>
             </li>
         </ul>
 
-        <div class="ubicacion" data-aos="fade-up">
-            <h2 class="h2-nosotros">¿Dónde Ubicarnos?</h2>
-            <iframe
+        <section class="ubicacion" data-aos="fade-up" aria-labelledby="titulo-ubicacion">
+            <h2 id="titulo-ubicacion" class="ubicacion-titulo">¿Dónde Ubicarnos?</h2>
+            <iframe title="Mapa de Google Maps con la ubicación de Revolución Integral"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.016887889447!2d-58.38375908477038!3d-34.60373888045943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1650000000000!5m2!1ses-419!2sar"
                 width="100%" height="250" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
-        </div>
+        </section>
     </footer>
 
     <!-- Bootstrap 5 JS Bundle -->
