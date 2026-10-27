@@ -17,3 +17,9 @@
 @use "layout/main";
 @use "layout/inicio";
 @use "layout/footer";
+
+// 4. Components
+@use "components/cards";
+@use "components/carousel";
+@use "components/receta";
+@use "components/nosotros";

@@ -1,0 +1,37 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ==========================================
+// COMPONENTE: tarjetas (article)
+// ==========================================
+article {
+  background-color: $color-fondo;
+  border: 1px solid $color-borde;
+  border-radius: $radio-grande;
+  padding: 1.2rem;
+  @include flex-columna($espacio-sm, center);
+
+  @include movil-chico {
+    padding: $espacio-md $espacio-sm;
+  }
+
+  ul,
+  ol {
+    padding-left: $espacio-lg;
+    text-align: left;
+    width: 100%;
+
+    li {
+      margin-bottom: $espacio-xs;
+      color: $color-texto;
+    }
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+}
