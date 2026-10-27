@@ -1,0 +1,46 @@
+@use "../utilities/variables" as *;
+
+// ==========================================
+// BASE: estilos globales a etiquetas
+// ==========================================
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $fuente-principal;
+  line-height: 1.6;
+  background-color: $color-fondo;
+  color: $color-texto;
+  min-height: 100vh;
+
+  // Grid maestro de la página: header, main y footer apilados
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $color-texto;
+  font-size: 1rem;
+}
+
+// Centrado general de imágenes
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: $radio-medio;
+}

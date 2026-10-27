@@ -1,0 +1,12 @@
+{
+  "name": "revolucion-integral",
+  "version": "1.0.0",
+  "description": "Sitio de recetas saludables - Coderhouse Desarrollo Web",
+  "scripts": {
+    "sass": "sass scss/main.scss style/style.css --no-source-map",
+    "sass:watch": "sass --watch scss/main.scss style/style.css --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}

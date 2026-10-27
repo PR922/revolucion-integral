@@ -1,0 +1,60 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ==========================================
+// TIPOGRAFÍAS Y ENCABEZADOS
+// ==========================================
+h1 {
+  color: $color-terracota;
+  font-size: 2rem;
+  text-align: center;
+
+  @include tablet {
+    font-size: 2.25rem;
+  }
+
+  @include escritorio {
+    font-size: 2.75rem;
+  }
+
+  @include movil-chico {
+    font-size: 1.6rem;
+  }
+
+  @include pantalla-grande {
+    font-size: 3.25rem;
+  }
+}
+
+h2 {
+  color: $color-texto;
+  font-size: 1.5rem;
+  text-align: center;
+
+  @include tablet {
+    font-size: 1.75rem;
+  }
+
+  @include escritorio {
+    font-size: 2rem;
+  }
+
+  @include movil-chico {
+    font-size: 1.3rem;
+  }
+
+  @include pantalla-grande {
+    font-size: 2.25rem;
+  }
+}
+
+h3 {
+  color: $color-verde;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+p {
+  color: $color-texto;
+  text-align: left;
+}

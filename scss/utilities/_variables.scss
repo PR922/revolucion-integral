@@ -1,0 +1,43 @@
+// ==========================================
+// VARIABLES - Revolución Integral
+// Único lugar donde viven colores, tipografías,
+// radios, espacios y breakpoints del sitio.
+// ==========================================
+
+// --- Paleta de colores ---
+$color-fondo: #FAF8F1;
+$color-verde: #667A4E;
+$color-terracota: #C97855;
+$color-texto: #493B32;
+$color-blanco: #ffffff;
+$color-gris-claro: #f1f1f1;
+$color-borde: rgba(73, 59, 50, 0.1);
+$color-overlay: rgba(0, 0, 0, 0.65);
+$sombra-texto-fuerte: 1px 1px 3px rgba(0, 0, 0, 0.8);
+$sombra-texto-suave: 1px 1px 2px rgba(0, 0, 0, 0.8);
+
+// --- Tipografía ---
+$fuente-principal: "Poppins", sans-serif;
+
+// --- Imágenes de fondo (la ruta es relativa a style/style.css) ---
+$imagen-fondo-hoja: url("../imagen/fondo-hoja-verde.png");
+
+// --- Radios de borde ---
+$radio-chico: 6px;
+$radio-medio: 8px;
+$radio-grande: 10px;
+$radio-circulo: 50%;
+
+// --- Espacios ---
+$espacio-xs: 0.4rem;
+$espacio-sm: 0.8rem;
+$espacio-md: 1rem;
+$espacio-lg: 1.5rem;
+$espacio-xl: 2rem;
+
+// --- Breakpoints (mobile-first) ---
+$bp-tablet: 768px;
+$bp-escritorio: 1024px;
+$bp-pantalla-grande: 1440px;
+$bp-movil-chico: 480px;
+$alto-horizontal: 500px;
