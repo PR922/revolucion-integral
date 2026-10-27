@@ -9,6 +9,8 @@
 // --- Paleta de colores ---
 $color-fondo: #FAF8F1;
 $color-verde: #667A4E;
+// Verde más oscuro para TEXTO sobre el fondo claro: contraste 5.3:1 (el verde de arriba da 4.4:1, menos del 4.5:1 que pide WCAG AA)
+$color-verde-texto: #5A6D43;
 $color-terracota: #C97855;
 $color-texto: #493B32;
 $color-blanco: #ffffff;

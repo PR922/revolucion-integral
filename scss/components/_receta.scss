@@ -33,11 +33,10 @@
     gap: $espacio-lg 2.5rem;
   }
 
-  // Los subtítulos de la receta (h3, h4, h5) se ven todos iguales
+  // Los subtítulos de la receta (h3 y h4) se ven todos iguales
   h3,
-  h4,
-  h5 {
-    color: $color-verde;
+  h4 {
+    color: $color-verde-texto;
     font-size: 1.25rem;
     text-align: center;
 
@@ -68,4 +67,9 @@
 
 .receta-tips {
   margin-top: $espacio-sm;
+}
+
+// Foto de la receta (<figure>): se le saca el margen que le pone Bootstrap
+.receta-foto {
+  margin: 0;
 }

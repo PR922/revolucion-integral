@@ -23,7 +23,7 @@
 
 // --- Carrusel: el texto entra cada vez que cambia la diapositiva ---
 .carousel-item.active .carousel-caption {
-  h5 {
+  h2 {
     @include animacion(aparecer-subir);
   }
 
@@ -67,7 +67,7 @@
 }
 
 // --- Fotos de las recetas: zoom suave dentro de su marco ---
-.receta-presentacion > div {
+.receta-foto {
   overflow: hidden;
   border-radius: $radio-medio;
 
