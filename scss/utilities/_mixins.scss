@@ -1,0 +1,50 @@
+@use "variables" as *;
+
+// ==========================================
+// MIXINS
+// ==========================================
+
+// --- Media queries reutilizables ---
+@mixin tablet {
+  @media (min-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin escritorio {
+  @media (min-width: $bp-escritorio) {
+    @content;
+  }
+}
+
+@mixin pantalla-grande {
+  @media (min-width: $bp-pantalla-grande) {
+    @content;
+  }
+}
+
+@mixin movil-chico {
+  @media (max-width: $bp-movil-chico) {
+    @content;
+  }
+}
+
+@mixin horizontal-bajo {
+  @media (max-height: $alto-horizontal) and (orientation: landscape) {
+    @content;
+  }
+}
+
+// --- Flex en columna (se repite en header, footer, article, etc.) ---
+@mixin flex-columna($gap, $alineacion: null) {
+  display: flex;
+  flex-direction: column;
+  align-items: $alineacion;
+  gap: $gap;
+}
+
+// --- Fondo con la imagen de hojas (header y footer) ---
+@mixin fondo-hoja {
+  background-color: $color-verde;
+  background-image: $imagen-fondo-hoja;
+}

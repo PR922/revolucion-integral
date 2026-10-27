@@ -1,0 +1,71 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ==========================================
+// COMPONENTE: receta (desayuno, almuerzo, merienda, cena)
+// Se combina con .grid-doble (layout/_main.scss)
+// ==========================================
+.receta {
+  grid-template-areas:
+    "presentacion"
+    "ingredientes"
+    "pasos";
+  align-items: start;
+
+  // Tablet: foto + ingredientes lado a lado, pasos abajo
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "presentacion ingredientes"
+      "pasos pasos";
+  }
+
+  // Escritorio: columna izquierda (foto + ingredientes) y columna derecha
+  // (paso a paso). La fila 2 ocupa el espacio sobrante para que la foto
+  // no se separe de los ingredientes
+  @include escritorio {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "presentacion pasos"
+      "ingredientes pasos";
+    padding: $espacio-xl;
+    gap: $espacio-lg 2.5rem;
+  }
+
+  // Los subtítulos de la receta (h3, h4, h5) se ven todos iguales
+  h3,
+  h4,
+  h5 {
+    color: $color-verde;
+    font-size: 1.25rem;
+    text-align: center;
+
+    @include escritorio {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.receta-presentacion {
+  grid-area: presentacion;
+  @include flex-columna($espacio-md);
+}
+
+.receta-ingredientes {
+  grid-area: ingredientes;
+}
+
+.receta-pasos {
+  grid-area: pasos;
+}
+
+.receta-ingredientes,
+.receta-pasos,
+.receta-tips {
+  @include flex-columna($espacio-sm);
+}
+
+.receta-tips {
+  margin-top: $espacio-sm;
+}

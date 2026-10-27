@@ -1,0 +1,69 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ==========================================
+// FOOTER
+// ==========================================
+.footer {
+  grid-area: footer;
+  @include fondo-hoja;
+  color: $color-texto;
+  padding: $espacio-lg $espacio-md;
+  @include flex-columna($espacio-lg, center);
+
+  @include escritorio {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: $espacio-xl 3rem;
+  }
+
+  .redes {
+    display: flex;
+    gap: $espacio-lg;
+    align-items: center;
+
+    img {
+      width: 36px;
+      height: 36px;
+      object-fit: cover;
+      border-radius: $radio-circulo;
+    }
+  }
+
+  .ubicacion {
+    @include flex-columna($espacio-sm, center);
+
+    @include escritorio {
+      flex-direction: row;
+      gap: $espacio-lg;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 300px;
+      height: 180px;
+      border-radius: $radio-medio;
+      border: none;
+
+      @include tablet {
+        max-width: 380px;
+        height: 200px;
+      }
+
+      @include escritorio {
+        max-width: 420px;
+        height: 220px;
+      }
+
+      @include movil-chico {
+        height: 180px;
+      }
+
+      @include pantalla-grande {
+        max-width: 520px;
+        height: 260px;
+      }
+    }
+  }
+}

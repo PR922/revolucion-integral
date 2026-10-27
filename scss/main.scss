@@ -1,0 +1,25 @@
+// ==========================================
+// MAIN: único punto de entrada de los estilos
+// Compila a style/style.css
+// ==========================================
+
+// 1. Utilities (variables y mixins)
+@use "utilities/variables" as *;
+@use "utilities/mixins" as *;
+
+// 2. Base (estilos globales a etiquetas)
+@use "base/base";
+@use "base/tipografia";
+
+// 3. Layout
+@use "layout/header";
+@use "layout/nav";
+@use "layout/main";
+@use "layout/inicio";
+@use "layout/footer";
+
+// 4. Components
+@use "components/cards";
+@use "components/carousel";
+@use "components/receta";
+@use "components/nosotros";

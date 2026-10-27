@@ -1,0 +1,56 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ==========================================
+// MAIN y grillas generales
+// ==========================================
+.main {
+  grid-area: main;
+  padding: $espacio-lg $espacio-md;
+  @include flex-columna($espacio-lg, center);
+
+  @include tablet {
+    padding: $espacio-xl $espacio-lg;
+  }
+
+  @include escritorio {
+    padding: 2.5rem $espacio-xl;
+    gap: $espacio-xl;
+  }
+
+  @include movil-chico {
+    padding: $espacio-md 0.75rem;
+  }
+}
+
+.contenido-recetario {
+  @include flex-columna($espacio-lg);
+  width: 100%;
+  max-width: 900px;
+
+  @include escritorio {
+    max-width: 1100px;
+    gap: $espacio-xl;
+  }
+
+  @include pantalla-grande {
+    max-width: 1280px;
+  }
+}
+
+// Grilla doble: base móvil = 1 columna; en escritorio pasa a 2 columnas
+.grid-doble {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $espacio-lg;
+
+  // Evita que el contenido de una celda ensanche la columna (fr)
+  > * {
+    min-width: 0;
+  }
+
+  @include escritorio {
+    grid-template-columns: 1fr 1fr;
+    gap: $espacio-xl;
+  }
+}
