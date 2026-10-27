@@ -6,6 +6,7 @@
 // 1. Utilities (variables y mixins)
 @use "utilities/variables" as *;
 @use "utilities/mixins" as *;
+@use "utilities/placeholders";
 
 // 2. Base (estilos globales a etiquetas)
 @use "base/base";

@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // ==========================================
 // VARIABLES - Revolución Integral
 // Único lugar donde viven colores, tipografías,
@@ -41,3 +43,11 @@ $bp-escritorio: 1024px;
 $bp-pantalla-grande: 1440px;
 $bp-movil-chico: 480px;
 $alto-horizontal: 500px;
+
+// --- Animaciones ---
+// Se usan operadores de Sass: * (multiplicación), + (suma) y math.div (división)
+$duracion-base: 0.3s;
+$duracion-lenta: $duracion-base * 2;
+$curva-suave: ease-in-out;
+$escala-hover: 1 + 0.05;
+$desplazamiento-entrada: math.div($espacio-lg, 2);

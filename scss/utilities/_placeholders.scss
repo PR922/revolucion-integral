@@ -1,0 +1,13 @@
+@use "mixins" as *;
+
+// ==========================================
+// PLACEHOLDERS (para usar con @extend)
+// No generan CSS por sí solos: solo se emiten
+// en los selectores que los extienden.
+// ==========================================
+
+// Elemento con el que se puede interactuar (logo, redes, etc.)
+%interactivo {
+  cursor: pointer;
+  @include transicion(transform);
+}
