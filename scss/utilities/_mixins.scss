@@ -48,3 +48,39 @@
   background-color: $color-verde;
   background-image: $imagen-fondo-hoja;
 }
+
+// ==========================================
+// MIXINS CON PARÁMETROS PARA ANIMACIONES
+// ==========================================
+
+// Transición con valores por defecto (se puede cambiar propiedad, duración y curva)
+@mixin transicion($propiedad: all, $duracion: $duracion-base, $curva: $curva-suave) {
+  transition: $propiedad $duracion $curva;
+}
+
+// Animación @keyframes con duración y retraso configurables
+@mixin animacion($nombre, $duracion: $duracion-lenta, $retraso: 0s) {
+  animation: $nombre $duracion $curva-suave $retraso both;
+}
+
+// Efecto al pasar el mouse: agranda el elemento y, si se quiere, le suma sombra
+@mixin elevar($escala: $escala-hover, $sombra: null) {
+  &:hover {
+    transform: scale($escala);
+    box-shadow: $sombra;
+  }
+}
+
+// Respeta a quienes tienen activada la opción "reducir movimiento"
+@mixin sin-movimiento {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
+// Rango intermedio donde la navbar de Bootstrap ya está expandida pero todavía es angosta
+@mixin navbar-compacta {
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    @content;
+  }
+}

@@ -1,3 +1,8 @@
+.navbar-brand img, .footer .redes img {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -95,6 +100,7 @@ h3 {
 p {
   color: #493B32;
   text-align: left;
+  overflow-wrap: break-word;
 }
 
 .header {
@@ -110,6 +116,13 @@ p {
 
 .navbar-brand img {
   max-height: 45px;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar-nav .nav-link {
+    white-space: nowrap;
+    font-size: 0.8rem;
+  }
 }
 
 .nav ul {
@@ -422,6 +435,7 @@ article ol {
 .carousel-caption p {
   color: #f1f1f1;
   font-size: 0.85rem;
+  text-align: center;
   margin-bottom: 0;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
@@ -535,5 +549,69 @@ article ol {
 @media (max-height: 500px) and (orientation: landscape) {
   .nosotros-carrusel .carousel-item img {
     height: 160px;
+  }
+}
+
+@keyframes aparecer-subir {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.carousel-item.active .carousel-caption h5 {
+  animation: aparecer-subir 0.6s ease-in-out 0s both;
+}
+.carousel-item.active .carousel-caption p {
+  animation: aparecer-subir 0.6s ease-in-out 0.3s both;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+.footer .redes img:hover {
+  transform: scale(1.155);
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+}
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.25rem;
+  height: 2px;
+  background-color: #C97855;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+.navbar-nav .nav-link:hover::after, .navbar-nav .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.receta-presentacion > div {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.receta-presentacion > div img {
+  transition: transform 0.6s ease-in-out;
+}
+.receta-presentacion > div:hover img {
+  transform: scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
   }
 }

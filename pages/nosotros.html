@@ -16,6 +16,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+    <!-- AOS: animaciones al hacer scroll -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <!-- CSS unificado -->
     <link rel="stylesheet" href="../style/style.css">
 </head>
@@ -59,10 +62,10 @@
     </header>
 
     <main class="main container my-4">
-        <h1 class="text-center mb-4">Sobre Nosotros</h1>
+        <h1 class="text-center mb-4" data-aos="fade-down">Sobre Nosotros</h1>
 
         <section class="contenido-recetario grid-doble nosotros">
-            <article class="nosotros-historia">
+            <article class="nosotros-historia" data-aos="fade-up">
                 <h2>Nuestra Historia</h2>
                 <p>Bienvenido a nuestro rincón de recetas saludables e integrales. Nuestro objetivo es compartir
                     opciones nutritivas, prácticas y deliciosas para acompañar cada momento del día.</p>
@@ -71,7 +74,7 @@
             </article>
 
             <!-- Carrusel de Bootstrap -->
-            <div id="carouselNosotros" class="carousel slide nosotros-carrusel" data-bs-ride="carousel">
+            <div id="carouselNosotros" class="carousel slide nosotros-carrusel" data-aos="zoom-in" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselNosotros" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
@@ -119,7 +122,7 @@
             </li>
         </ul>
 
-        <div class="ubicacion">
+        <div class="ubicacion" data-aos="fade-up">
             <h2 class="h2-nosotros">¿Dónde Ubicarnos?</h2>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.016887889447!2d-58.38375908477038!3d-34.60373888045943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1650000000000!5m2!1ses-419!2sar"
@@ -133,6 +136,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <!-- AOS: animaciones al hacer scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
