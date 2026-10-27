@@ -1,0 +1,91 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/placeholders";
+
+// ==========================================
+// ANIMACIONES NATIVAS (transition y @keyframes)
+// Sutiles: acompañan la interacción sin estorbar.
+// Las animaciones de scroll las hace AOS desde el HTML.
+// ==========================================
+
+// --- @keyframes ---
+@keyframes aparecer-subir {
+  from {
+    opacity: 0;
+    transform: translateY($desplazamiento-entrada);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// --- Carrusel: el texto entra cada vez que cambia la diapositiva ---
+.carousel-item.active .carousel-caption {
+  h5 {
+    @include animacion(aparecer-subir);
+  }
+
+  p {
+    @include animacion(aparecer-subir, $duracion-lenta, $duracion-base);
+  }
+}
+
+// --- Logo y redes sociales: se agrandan al pasar el mouse (@extend + mixin) ---
+.navbar-brand img {
+  @extend %interactivo;
+  @include elevar;
+}
+
+.footer .redes img {
+  @extend %interactivo;
+  @include elevar($escala-hover * 1.1);
+}
+
+// --- Navbar: subrayado que crece desde la izquierda ---
+.navbar-nav .nav-link {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.25rem;
+    height: 2px;
+    background-color: $color-terracota;
+    transform: scaleX(0);
+    transform-origin: left;
+    @include transicion(transform);
+  }
+
+  &:hover::after,
+  &.active::after {
+    transform: scaleX(1);
+  }
+}
+
+// --- Fotos de las recetas: zoom suave dentro de su marco ---
+.receta-presentacion > div {
+  overflow: hidden;
+  border-radius: $radio-medio;
+
+  img {
+    @include transicion(transform, $duracion-lenta);
+  }
+
+  &:hover img {
+    transform: scale($escala-hover);
+  }
+}
+
+// --- Accesibilidad: sin movimiento si el usuario lo pidió ---
+@include sin-movimiento {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
