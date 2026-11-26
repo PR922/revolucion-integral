@@ -107,7 +107,7 @@ p {
   grid-area: header;
   padding: 1rem;
   background-color: #667A4E;
-  background-image: url("../imagen/fondo-hojas-acuarela.avif");
+  background-image: url("../assets/fondo-hojas-acuarela.avif");
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -247,7 +247,7 @@ p {
 .footer {
   grid-area: footer;
   background-color: #667A4E;
-  background-image: url("../imagen/fondo-hojas-acuarela.avif");
+  background-image: url("../assets/fondo-hojas-acuarela.avif");
   color: #493B32;
   padding: 1.5rem 1rem;
   display: flex;
